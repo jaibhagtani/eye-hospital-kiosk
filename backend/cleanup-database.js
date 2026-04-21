@@ -3,7 +3,7 @@ const Patient = require('./models/Patient');
 
 async function cleanupDatabase() {
   try {
-    await mongoose.connect('mongodb://127.0.0.1:27017/eyeHospital');
+    await mongoose.connect(process.env.MONGO_URL);
     console.log('🔗 Connected to MongoDB');
 
     // Remove test patients with incomplete data

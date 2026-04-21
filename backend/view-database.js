@@ -7,7 +7,7 @@ const Queue = require('./models/Queue');
 async function viewDatabase() {
   try {
     // Connect to MongoDB
-    await mongoose.connect('mongodb://127.0.0.1:27017/eyeHospital');
+    await mongoose.connect(process.env.MONGO_URL);
     console.log('🔗 Connected to MongoDB\n');
 
     // View Doctors

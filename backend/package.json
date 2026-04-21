@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
+    "seed": "node seed.js",
     "dev": "nodemon server.js",
     "view-db": "node view-database.js",
     "cleanup-db": "node cleanup-database.js",

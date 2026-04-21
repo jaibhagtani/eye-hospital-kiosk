@@ -11,7 +11,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/eyeHospital';
+const MONGO_URI = process.env.MONGO_URL;
 mongoose.connect(MONGO_URI)
   .then(() => console.log('✅ Connected to MongoDB'))
   .catch((err) => { console.error('❌ MongoDB Error:', err.message); process.exit(1); });
